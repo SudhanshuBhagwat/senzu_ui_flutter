@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:senzu_ui_flutter/components/avatar/avatar.dart';
 
 class HeaderWithAvatarNoTitle extends StatelessWidget {
   const HeaderWithAvatarNoTitle({
@@ -13,22 +14,24 @@ class HeaderWithAvatarNoTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      child: Row(
-        children: [
-          IconButton(
-            icon: Icon(icon),
-            iconSize: 40,
-            onPressed: null,
-          ),
-          const Spacer(),
-          CircleAvatar(
-            backgroundImage: NetworkImage(imageUri),
-            radius: avatarChange,
-          ),
-        ],
+    return AppBar(
+      elevation: 0,
+      leading: IconButton(
+        icon: Icon(icon),
+        iconSize: 40,
+        onPressed: null,
       ),
+      toolbarHeight: 65.0,
+      actions: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Avatar(
+            size: 50,
+            radius: 'full',
+            imageUri: imageUri,
+          ),
+        ),
+      ],
     );
   }
 }

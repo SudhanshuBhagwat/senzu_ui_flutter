@@ -13,25 +13,22 @@ class SimpleHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      child: Row(
-        children: [
-          Text(
-            headerTitle,
-            style: const TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const Spacer(),
-          IconButton(
-            icon: Icon(icon),
-            iconSize: 40,
-            onPressed: null,
-          ),
-        ],
+    return AppBar(
+      elevation: 0,
+      title: Text(
+        headerTitle,
+        style: const TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.bold,
+        ),
       ),
+      actions: [
+        IconButton(
+          icon: Icon(icon),
+          iconSize: 40,
+          onPressed: null,
+        ),
+      ],
     );
   }
 }

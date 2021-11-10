@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:senzu_ui_flutter/senzu_ui_flutter.dart';
 
@@ -33,44 +34,52 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        flexibleSpace: const SafeArea(
-          child: SimpleHeader(
-            headerTitle: headerTitle,
-            icon: icon,
+        title: const Text(
+          'Senzu UI Example',
+          style: TextStyle(
+            fontSize: 26.0,
+            fontWeight: FontWeight.bold,
           ),
         ),
+        centerTitle: true,
       ),
-      body: const SafeArea(
-        child: Avatar(
-          size: 60,
-          radius: 'sm',
-          imageUri: imageURI,
+      body: SafeArea(
+        child: ListView(
+          physics: const BouncingScrollPhysics(),
+          children: [
+            Row(
+              children: const [
+                Avatar(
+                  size: 50,
+                  radius: 'sm',
+                  imageUri: imageURI,
+                ),
+              ],
+            ),
+            const SimpleHeader(
+              headerTitle: headerTitle,
+              icon: icon,
+            ),
+            const HeaderWithAvatar(
+              headerTitle: headerTitle,
+              isHeaderCentered: true,
+              icon: icon,
+              imageUri: imageURI,
+            ),
+            const HeaderWithAvatarNoTitle(
+              icon: icon,
+              imageUri: imageURI,
+            ),
+            HeaderWithAvatarAndSearch(
+              headerTitle: headerTitle,
+              icon: icon,
+              imageUri: imageURI,
+              onSumit: (String value) {
+                // Do some submit logic
+              },
+            ),
+          ],
         ),
-        // ListView(
-        //   physics: const BouncingScrollPhysics(),
-        //   children: [
-        //     const SimpleHeader(
-        //       headerTitle: headerTitle,
-        //       icon: icon,
-        //     ),
-        //     const HeaderWithAvatar(
-        //       headerTitle: headerTitle,
-        //       isHeaderCentered: true,
-        //       icon: icon,
-        //       imageUri: imageURI,
-        //     ),
-        //     const HeaderWithAvatarNoTitle(
-        //       icon: icon,
-        //       imageUri: imageURI,
-        //     ),
-        //     HeaderWithAvatarAndSearch(
-        //       headerTitle: headerTitle,
-        //       icon: icon,
-        //       imageUri: imageURI,
-        //       onSumit: (String value) {
-        //         // Do some submit logic
-        //       },
-        //     ),
       ),
     );
   }

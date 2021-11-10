@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:senzu_ui_flutter/components/avatar/avatar.dart';
 
 class HeaderWithAvatar extends StatelessWidget {
   const HeaderWithAvatar({
@@ -18,34 +19,33 @@ class HeaderWithAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CircleAvatar(
-            radius: avatarChange,
-            backgroundImage: NetworkImage(imageUri),
-          ),
-          if (!isHeaderCentered)
-            const SizedBox(
-              width: 12.0,
-            ),
-          Text(
-            headerTitle,
-            style: const TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          if (!isHeaderCentered) const Spacer(),
-          IconButton(
-            icon: Icon(icon),
-            iconSize: 40,
-            onPressed: null,
-          ),
-        ],
+    return AppBar(
+      elevation: 0,
+      centerTitle: isHeaderCentered,
+      title: Text(
+        headerTitle,
+        style: const TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.bold,
+        ),
       ),
+      toolbarHeight: 65,
+      leadingWidth: 65,
+      leading: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Avatar(
+          size: 50,
+          radius: 'full',
+          imageUri: imageUri,
+        ),
+      ),
+      actions: [
+        IconButton(
+          icon: Icon(icon),
+          iconSize: 40,
+          onPressed: null,
+        ),
+      ],
     );
   }
 }

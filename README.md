@@ -1,39 +1,73 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Senzu UI
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+> Super charge your Flutter app development with this simple yet highly customizable component framework
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+## Debug the project on local:
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Run the following command to create the required dependencies to run the project on the preferred device.
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+```bash
+> flutter create .
 ```
 
-## Additional information
+Run the project from the example folder to browse through the components.
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```bash
+> cd example/
+> flutter run lib/main.dart
+```
+
+## Components list:
+
+- [ ] Header
+  - [ ] Simple AppBar
+  - [ ] AppBar with Avatar
+  - [ ] AppBar with Avatar and Search
+  - [ ] AppBar with Avatar and Header
+  - [ ] AppBar with Avatar and Header in Center
+  - [ ] AppBar with Avatar and Header in Center with Sub-Heading
+  - [ ] AppBar with Greeting
+- [ ] Avatar
+  - [ ] Simple Circular Avatar
+    - [ ] Avatar with Image
+      - [ ] Avatar - Border -> NONE
+      - [ ] Avatar - Border -> SM
+      - [ ] Avatar - Border -> MD
+      - [ ] Avatar - Border -> LG
+      - [ ] Avatar - Border -> XLG
+      - [ ] Avatar - Border -> FULL
+    - [ ] Avatar with Initial
+      - [ ] Avatar - Border -> NONE
+      - [ ] Avatar - Border -> SM
+      - [ ] Avatar - Border -> MD
+      - [ ] Avatar - Border -> LG
+      - [ ] Avatar - Border -> XLG
+      - [ ] Avatar - Border -> FULL
+  - [ ] Stacked Avatars list (Top)
+  - [ ] Stacked Avatar list (Bottom)
+  - [ ] Avatar with Badge
+- [ ] Breadcrumbs
+- [ ] Side panels
+- [ ] Sliding bottom sheet
+- [ ] Buttons
+  - [ ] Filed
+  - [ ] Outline
+  - [ ] Disabled
+  - [ ] Loading
+- [ ] Check box
+- [ ] Toggle
+- [ ] Modals
+- [ ] Alerts
+- [ ] Cards
+- [ ] Carousels
+- [ ] Lists
+  - [ ] Horizontal
+  - [ ] Vertical
+- [ ] Stats
+- [ ] Tabs
+- [ ] Toast
+- [ ] Pills
+- [ ] Text Fields
+- [ ] Drop-down
+
+### Please create issues for coponents that you want me to include in this list.

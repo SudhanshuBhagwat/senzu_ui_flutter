@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HeaderWithAvatarAndSearch extends StatefulWidget {
-  HeaderWithAvatarAndSearch({
+  const HeaderWithAvatarAndSearch({
     Key? key,
     required this.headerTitle,
     required this.icon,

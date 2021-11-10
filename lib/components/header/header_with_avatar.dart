@@ -21,6 +21,7 @@ class HeaderWithAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
+      backgroundColor: Colors.transparent,
       centerTitle: isHeaderCentered,
       title: Text(
         headerTitle,

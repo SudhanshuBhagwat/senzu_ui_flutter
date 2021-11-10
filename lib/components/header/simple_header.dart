@@ -15,6 +15,7 @@ class SimpleHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
+      backgroundColor: Colors.transparent,
       title: Text(
         headerTitle,
         style: const TextStyle(

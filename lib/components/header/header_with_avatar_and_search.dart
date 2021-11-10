@@ -43,6 +43,7 @@ class _HeaderWithAvatarAndSearchState extends State<HeaderWithAvatarAndSearch> {
       elevation: 0,
       toolbarHeight: 65,
       leadingWidth: 65,
+      backgroundColor: Colors.transparent,
       leading: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Avatar(

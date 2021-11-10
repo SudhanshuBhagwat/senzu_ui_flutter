@@ -16,6 +16,7 @@ class HeaderWithAvatarNoTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
+      backgroundColor: Colors.transparent,
       leading: IconButton(
         icon: Icon(icon),
         iconSize: 40,

@@ -57,6 +57,7 @@ class _HeaderWithAvatarAndSearchState extends State<HeaderWithAvatarAndSearch> {
         decoration: InputDecoration(
           hintText: 'Search',
           contentPadding: const EdgeInsets.symmetric(horizontal: 20.0),
+          prefixIcon: const Icon(Icons.search),
           border: OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.grey.shade100,
@@ -64,7 +65,7 @@ class _HeaderWithAvatarAndSearchState extends State<HeaderWithAvatarAndSearch> {
               style: BorderStyle.solid,
             ),
             borderRadius: const BorderRadius.all(
-              Radius.circular(40.0),
+              Radius.circular(6.0),
             ),
           ),
         ),

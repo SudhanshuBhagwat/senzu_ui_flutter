@@ -66,6 +66,13 @@ class MyHomePage extends StatelessWidget {
               icon: icon,
               imageUri: imageURI,
             ),
+            const HeaderWithAvatarAndSubheading(
+              headerTitle: headerTitle,
+              subTitle: 'Simple Sub Heading',
+              isHeaderCentered: true,
+              icon: icon,
+              imageUri: imageURI,
+            ),
             const HeaderWithAvatarNoTitle(
               icon: icon,
               imageUri: imageURI,
@@ -77,6 +84,11 @@ class MyHomePage extends StatelessWidget {
               onSumit: (String value) {
                 // Do some submit logic
               },
+            ),
+            const HeaderWithGreeting(
+              greeting: 'Hello',
+              title: 'Sudhanshu',
+              imageUri: imageURI,
             ),
           ],
         ),

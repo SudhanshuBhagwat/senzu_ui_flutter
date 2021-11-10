@@ -71,3 +71,5 @@ Run the project from the example folder to browse through the components.
 - [ ] Drop-down
 
 ### Please create issues for coponents that you want me to include in this list.
+
+### I will be updating the documentation website as soon as I'm done with a component.

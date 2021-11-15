@@ -19,14 +19,14 @@ Run the project from the example folder to browse through the components.
 
 ## Components list:
 
-- [ ] Header
+- [x] Header
   - [x] Simple AppBar
-  - [ ] AppBar with Avatar
-  - [ ] AppBar with Avatar and Search
-  - [ ] AppBar with Avatar and Header
-  - [ ] AppBar with Avatar and Header in Center
-  - [ ] AppBar with Avatar and Header in Center with Sub-Heading
-  - [ ] AppBar with Greeting
+  - [x] AppBar with Avatar
+  - [x] AppBar with Avatar and Search
+  - [x] AppBar with Avatar and Header
+  - [x] AppBar with Avatar and Header in Center
+  - [x] AppBar with Avatar and Header in Center with Sub-Heading
+  - [x] AppBar with Greeting
 - [ ] Avatar
   - [ ] Simple Circular Avatar
     - [ ] Avatar with Image

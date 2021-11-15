@@ -8,11 +8,13 @@ class HeaderWithGreeting extends StatelessWidget
     required this.greeting,
     required this.title,
     required this.imageUri,
+    required this.avatarSize,
   }) : super(key: key);
 
   final String imageUri;
   final String greeting;
   final String title;
+  final AvatarSize avatarSize;
   static const double avatarChange = 25.0;
 
   @override
@@ -53,7 +55,7 @@ class HeaderWithGreeting extends StatelessWidget
             children: [
               Avatar(
                 size: 70,
-                radius: 'full',
+                radius: avatarSize,
                 imageUri: imageUri,
               ),
             ],

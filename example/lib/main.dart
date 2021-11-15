@@ -46,33 +46,33 @@ class MyHomePage extends StatelessWidget {
               children: const [
                 Avatar(
                   size: 50,
-                  radius: 'none',
                   title: 'S',
+                  radius: AvatarSize.none,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'sm',
                   title: 'S',
+                  radius: AvatarSize.sm,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'md',
                   title: 'S',
+                  radius: AvatarSize.md,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'lg',
                   title: 'S',
+                  radius: AvatarSize.lg,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'xlg',
                   title: 'S',
+                  radius: AvatarSize.xlg,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'full',
                   title: 'S',
+                  radius: AvatarSize.full,
                 ),
               ],
             ),
@@ -84,39 +84,39 @@ class MyHomePage extends StatelessWidget {
               children: const [
                 Avatar(
                   size: 50,
-                  radius: 'none',
                   title: 'S',
                   imageUri: imageURI,
+                  radius: AvatarSize.none,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'sm',
                   title: 'S',
                   imageUri: imageURI,
+                  radius: AvatarSize.sm,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'md',
                   title: 'S',
                   imageUri: imageURI,
+                  radius: AvatarSize.md,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'lg',
                   title: 'S',
                   imageUri: imageURI,
+                  radius: AvatarSize.lg,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'xlg',
                   title: 'S',
                   imageUri: imageURI,
+                  radius: AvatarSize.xlg,
                 ),
                 Avatar(
                   size: 50,
-                  radius: 'full',
                   title: 'S',
                   imageUri: imageURI,
+                  radius: AvatarSize.full,
                 ),
               ],
             ),
@@ -129,6 +129,7 @@ class MyHomePage extends StatelessWidget {
               isHeaderCentered: true,
               icon: icon,
               imageUri: imageURI,
+              avatarSize: AvatarSize.full,
             ),
             const HeaderWithAvatarAndSubheading(
               headerTitle: headerTitle,
@@ -136,16 +137,19 @@ class MyHomePage extends StatelessWidget {
               isHeaderCentered: true,
               icon: icon,
               imageUri: imageURI,
+              avatarSize: AvatarSize.full,
             ),
             const HeaderWithAvatarNoTitle(
               icon: icon,
               imageUri: imageURI,
+              avatarSize: AvatarSize.full,
             ),
             HeaderWithAvatarAndSearch(
               headerTitle: headerTitle,
               icon: icon,
               imageUri: imageURI,
-              onSumit: (String value) {
+              avatarSize: AvatarSize.full,
+              onSubmit: (String value) {
                 // Do some submit logic
               },
             ),
@@ -153,6 +157,7 @@ class MyHomePage extends StatelessWidget {
               greeting: 'Hello',
               title: 'Sudhanshu',
               imageUri: imageURI,
+              avatarSize: AvatarSize.full,
             ),
           ],
         ),

@@ -9,12 +9,14 @@ class HeaderWithAvatar extends StatelessWidget implements PreferredSizeWidget {
     required this.headerTitle,
     required this.icon,
     required this.imageUri,
+    required this.avatarSize,
   }) : super(key: key);
 
   final bool isHeaderCentered;
   final String headerTitle;
   final IconData icon;
   final String imageUri;
+  final AvatarSize avatarSize;
   static const double avatarChange = 25.0;
 
   @override
@@ -36,7 +38,7 @@ class HeaderWithAvatar extends StatelessWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.all(8.0),
         child: Avatar(
           size: 50,
-          radius: 'full',
+          radius: avatarSize,
           imageUri: imageUri,
         ),
       ),

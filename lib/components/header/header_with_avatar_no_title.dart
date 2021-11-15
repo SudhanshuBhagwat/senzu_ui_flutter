@@ -7,10 +7,12 @@ class HeaderWithAvatarNoTitle extends StatelessWidget
     Key? key,
     required this.icon,
     required this.imageUri,
+    required this.avatarSize,
   }) : super(key: key);
 
   final IconData icon;
   final String imageUri;
+  final AvatarSize avatarSize;
   static const double avatarChange = 25.0;
 
   @override
@@ -29,7 +31,7 @@ class HeaderWithAvatarNoTitle extends StatelessWidget
           padding: const EdgeInsets.all(8.0),
           child: Avatar(
             size: 50,
-            radius: 'full',
+            radius: avatarSize,
             imageUri: imageUri,
           ),
         ),

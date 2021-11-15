@@ -9,13 +9,15 @@ class HeaderWithAvatarAndSearch extends StatefulWidget
     required this.headerTitle,
     required this.icon,
     required this.imageUri,
-    required this.onSumit,
+    required this.onSubmit,
+    required this.avatarSize,
   }) : super(key: key);
 
   final String headerTitle;
   final IconData icon;
   final String imageUri;
-  final Function(String value) onSumit;
+  final AvatarSize avatarSize;
+  final Function(String value) onSubmit;
   static const double avatarChange = 25.0;
 
   @override
@@ -52,7 +54,7 @@ class _HeaderWithAvatarAndSearchState extends State<HeaderWithAvatarAndSearch> {
         padding: const EdgeInsets.all(8.0),
         child: Avatar(
           size: 50,
-          radius: 'full',
+          radius: widget.avatarSize,
           imageUri: widget.imageUri,
         ),
       ),
@@ -73,7 +75,7 @@ class _HeaderWithAvatarAndSearchState extends State<HeaderWithAvatarAndSearch> {
             ),
           ),
         ),
-        onSubmitted: widget.onSumit,
+        onSubmitted: widget.onSubmit,
       ),
       actions: [
         IconButton(
@@ -83,45 +85,5 @@ class _HeaderWithAvatarAndSearchState extends State<HeaderWithAvatarAndSearch> {
         ),
       ],
     );
-    // Container(
-    //   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-    //   child: Row(
-    //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //     children: [
-    //       CircleAvatar(
-    //         radius: HeaderWithAvatarAndSearch.avatarChange,
-    //         backgroundImage: NetworkImage(widget.imageUri),
-    //       ),
-    //       Flexible(
-    //         child: Container(
-    //           margin: const EdgeInsets.symmetric(horizontal: 20.0),
-    //           child: TextField(
-    //             controller: _controller,
-    //             decoration: InputDecoration(
-    //               hintText: 'Search',
-    //               contentPadding: const EdgeInsets.symmetric(horizontal: 20.0),
-    //               border: OutlineInputBorder(
-    //                 borderSide: BorderSide(
-    //                   color: Colors.grey.shade100,
-    //                   width: 4.0,
-    //                   style: BorderStyle.solid,
-    //                 ),
-    //                 borderRadius: const BorderRadius.all(
-    //                   Radius.circular(40.0),
-    //                 ),
-    //               ),
-    //             ),
-    //             onSubmitted: widget.onSumit,
-    //           ),
-    //         ),
-    //       ),
-    //       IconButton(
-    //         icon: Icon(widget.icon),
-    //         iconSize: 40,
-    //         onPressed: null,
-    //       ),
-    //     ],
-    //   ),
-    // );
   }
 }

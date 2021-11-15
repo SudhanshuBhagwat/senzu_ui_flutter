@@ -30,6 +30,7 @@ class HeaderWithGreeting extends StatelessWidget
               Text(
                 '$greeting,',
                 style: const TextStyle(
+                  color: Colors.grey,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -38,7 +39,6 @@ class HeaderWithGreeting extends StatelessWidget
                 title,
                 style: const TextStyle(
                   fontSize: 30,
-                  color: Colors.grey,
                   fontWeight: FontWeight.bold,
                 ),
               ),

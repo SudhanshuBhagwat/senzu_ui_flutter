@@ -28,21 +28,21 @@ Run the project from the example folder to browse through the components.
   - [x] AppBar with Avatar and Header in Center with Sub-Heading
   - [x] AppBar with Greeting
 - [ ] Avatar
-  - [ ] Simple Circular Avatar
-    - [ ] Avatar with Image
-      - [ ] Avatar - Border -> NONE
-      - [ ] Avatar - Border -> SM
-      - [ ] Avatar - Border -> MD
-      - [ ] Avatar - Border -> LG
-      - [ ] Avatar - Border -> XLG
-      - [ ] Avatar - Border -> FULL
-    - [ ] Avatar with Initial
-      - [ ] Avatar - Border -> NONE
-      - [ ] Avatar - Border -> SM
-      - [ ] Avatar - Border -> MD
-      - [ ] Avatar - Border -> LG
-      - [ ] Avatar - Border -> XLG
-      - [ ] Avatar - Border -> FULL
+  - [x] Simple Circular Avatar
+    - [x] Avatar with Image
+      - [x] Avatar - Border -> NONE
+      - [x] Avatar - Border -> SM
+      - [x] Avatar - Border -> MD
+      - [x] Avatar - Border -> LG
+      - [x] Avatar - Border -> XLG
+      - [x] Avatar - Border -> FULL
+    - [x] Avatar with Initial
+      - [x] Avatar - Border -> NONE
+      - [x] Avatar - Border -> SM
+      - [x] Avatar - Border -> MD
+      - [x] Avatar - Border -> LG
+      - [x] Avatar - Border -> XLG
+      - [x] Avatar - Border -> FULL
   - [ ] Stacked Avatars list (Top)
   - [ ] Stacked Avatar list (Bottom)
   - [ ] Avatar with Badge

@@ -42,10 +42,80 @@ class MyHomePage extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
                 Avatar(
                   size: 50,
+                  radius: 'none',
+                  title: 'S',
+                ),
+                Avatar(
+                  size: 50,
                   radius: 'sm',
+                  title: 'S',
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'md',
+                  title: 'S',
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'lg',
+                  title: 'S',
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'xlg',
+                  title: 'S',
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'full',
+                  title: 'S',
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 16.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                Avatar(
+                  size: 50,
+                  radius: 'none',
+                  title: 'S',
+                  imageUri: imageURI,
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'sm',
+                  title: 'S',
+                  imageUri: imageURI,
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'md',
+                  title: 'S',
+                  imageUri: imageURI,
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'lg',
+                  title: 'S',
+                  imageUri: imageURI,
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'xlg',
+                  title: 'S',
+                  imageUri: imageURI,
+                ),
+                Avatar(
+                  size: 50,
+                  radius: 'full',
+                  title: 'S',
                   imageUri: imageURI,
                 ),
               ],

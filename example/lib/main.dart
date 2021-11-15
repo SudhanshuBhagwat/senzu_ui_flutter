@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:senzu_ui_flutter/senzu_ui_flutter.dart';
 
 void main() {
@@ -34,13 +34,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: const Text(
-          'Senzu UI Example',
-          style: TextStyle(
-            fontSize: 26.0,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: SvgPicture.asset('assets/images/logo.svg', height: 36),
         centerTitle: true,
       ),
       body: SafeArea(

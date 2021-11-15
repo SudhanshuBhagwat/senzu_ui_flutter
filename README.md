@@ -69,5 +69,3 @@ Run the project from the example folder to browse through the components.
 - [ ] Pills
 - [ ] Text Fields
 - [ ] Drop-down
-
-### I will be updating the documentation website as soon as I'm done with a component.

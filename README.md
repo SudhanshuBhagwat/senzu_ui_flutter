@@ -20,7 +20,7 @@ Run the project from the example folder to browse through the components.
 ## Components list:
 
 - [ ] Header
-  - [ ] Simple AppBar
+  - [x] Simple AppBar
   - [ ] AppBar with Avatar
   - [ ] AppBar with Avatar and Search
   - [ ] AppBar with Avatar and Header

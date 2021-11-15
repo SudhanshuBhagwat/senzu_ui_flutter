@@ -7,7 +7,7 @@ void main() {
 }
 
 const String imageURI = 'https://source.unsplash.com/random';
-const String headerTitle = 'Header';
+const String headerTitle = 'Senzu UI';
 const IconData icon = Icons.menu;
 
 class MyApp extends StatelessWidget {

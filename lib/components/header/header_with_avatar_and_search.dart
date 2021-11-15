@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:senzu_ui_flutter/components/avatar/avatar.dart';
 
-class HeaderWithAvatarAndSearch extends StatefulWidget {
+class HeaderWithAvatarAndSearch extends StatefulWidget
+    implements PreferredSizeWidget {
   const HeaderWithAvatarAndSearch({
     Key? key,
     required this.headerTitle,
@@ -20,6 +21,9 @@ class HeaderWithAvatarAndSearch extends StatefulWidget {
   @override
   State<HeaderWithAvatarAndSearch> createState() =>
       _HeaderWithAvatarAndSearchState();
+
+  @override
+  Size get preferredSize => const Size.fromHeight(60.0);
 }
 
 class _HeaderWithAvatarAndSearchState extends State<HeaderWithAvatarAndSearch> {

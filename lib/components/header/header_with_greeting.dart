@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:senzu_ui_flutter/components/avatar/avatar.dart';
 
-class HeaderWithGreeting extends StatelessWidget {
+class HeaderWithGreeting extends StatelessWidget
+    implements PreferredSizeWidget {
   const HeaderWithGreeting({
     Key? key,
     required this.greeting,
@@ -61,4 +62,7 @@ class HeaderWithGreeting extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(100.0);
 }

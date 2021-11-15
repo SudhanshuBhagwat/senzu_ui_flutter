@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:senzu_ui_flutter/components/avatar/avatar.dart';
 
-class HeaderWithAvatarNoTitle extends StatelessWidget {
+class HeaderWithAvatarNoTitle extends StatelessWidget
+    implements PreferredSizeWidget {
   const HeaderWithAvatarNoTitle({
     Key? key,
     required this.icon,
@@ -35,4 +36,7 @@ class HeaderWithAvatarNoTitle extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(60.0);
 }

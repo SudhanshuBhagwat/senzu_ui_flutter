@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SimpleHeader extends StatelessWidget {
+class SimpleHeader extends StatelessWidget implements PreferredSizeWidget {
   const SimpleHeader({
     Key? key,
     required this.headerTitle,
@@ -32,4 +32,7 @@ class SimpleHeader extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(60.0);
 }

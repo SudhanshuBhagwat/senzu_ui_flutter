@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:senzu_ui_flutter/components/avatar/avatar.dart';
 
-class HeaderWithAvatar extends StatelessWidget {
+class HeaderWithAvatar extends StatelessWidget implements PreferredSizeWidget {
   const HeaderWithAvatar({
     Key? key,
     this.isHeaderCentered = false,
@@ -49,4 +49,7 @@ class HeaderWithAvatar extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(60.0);
 }

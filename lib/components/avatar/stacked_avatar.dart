@@ -18,7 +18,7 @@ class StackedAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
-      child: Container(
+      child: SizedBox(
         width: (maxAvatars + 1) * 32.0,
         height: 60.0,
         child: Stack(

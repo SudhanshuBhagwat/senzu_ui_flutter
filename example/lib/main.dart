@@ -174,19 +174,29 @@ class MyHomePage extends StatelessWidget {
               imageUri: imageURI,
               avatarSize: AvatarSize.full,
             ),
-            const StackedAvatar(
-              data: data,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                StackedAvatar(
+                  data: data,
+                ),
+                StackedAvatar(
+                  data: dataWithNoAvatar,
+                ),
+              ],
             ),
-            const StackedAvatar(
-              data: dataWithNoAvatar,
-            ),
-            const StackedAvatar(
-              data: data,
-              ltr: false,
-            ),
-            const StackedAvatar(
-              data: dataWithNoAvatar,
-              ltr: false,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                StackedAvatar(
+                  data: data,
+                  ltr: false,
+                ),
+                StackedAvatar(
+                  data: dataWithNoAvatar,
+                  ltr: false,
+                ),
+              ],
             ),
           ],
         ),

@@ -9,6 +9,22 @@ void main() {
 const String imageURI = 'https://source.unsplash.com/random';
 const String headerTitle = 'Senzu UI';
 const IconData icon = Icons.menu;
+const List<Map<String, String>> dataWithNoAvatar = [
+  {'intial': 'S'},
+  {'intial': 'U'},
+  {'intial': 'D'},
+  {'intial': 'H'},
+  {'intial': 'A'},
+  {'intial': 'N'},
+];
+const List<Map<String, String>> data = [
+  {'imageUri': imageURI, 'intial': 'S'},
+  {'imageUri': imageURI, 'intial': 'U'},
+  {'imageUri': imageURI, 'intial': 'D'},
+  {'imageUri': imageURI, 'intial': 'H'},
+  {'imageUri': imageURI, 'intial': 'A'},
+  {'imageUri': imageURI, 'intial': 'N'},
+];
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -134,7 +150,6 @@ class MyHomePage extends StatelessWidget {
             const HeaderWithAvatarAndSubheading(
               headerTitle: headerTitle,
               subTitle: 'Simple Sub Heading',
-              isHeaderCentered: true,
               icon: icon,
               imageUri: imageURI,
               avatarSize: AvatarSize.full,
@@ -158,6 +173,20 @@ class MyHomePage extends StatelessWidget {
               title: 'Sudhanshu',
               imageUri: imageURI,
               avatarSize: AvatarSize.full,
+            ),
+            const StackedAvatar(
+              data: data,
+            ),
+            const StackedAvatar(
+              data: dataWithNoAvatar,
+            ),
+            const StackedAvatar(
+              data: data,
+              ltr: false,
+            ),
+            const StackedAvatar(
+              data: dataWithNoAvatar,
+              ltr: false,
             ),
           ],
         ),

@@ -6,7 +6,6 @@ class HeaderWithAvatarAndSubheading extends StatelessWidget
     implements PreferredSizeWidget {
   const HeaderWithAvatarAndSubheading({
     Key? key,
-    this.isHeaderCentered = false,
     required this.headerTitle,
     required this.subTitle,
     required this.icon,
@@ -14,7 +13,6 @@ class HeaderWithAvatarAndSubheading extends StatelessWidget
     required this.avatarSize,
   }) : super(key: key);
 
-  final bool isHeaderCentered;
   final String headerTitle;
   final String subTitle;
   final IconData icon;
@@ -27,7 +25,7 @@ class HeaderWithAvatarAndSubheading extends StatelessWidget
     return AppBar(
       elevation: 0,
       backgroundColor: Colors.transparent,
-      centerTitle: isHeaderCentered,
+      centerTitle: true,
       title: Column(
         children: [
           Text(

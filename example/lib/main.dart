@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:senzu_ui_flutter/components/index.dart';
-import 'package:senzuiui_flutter/screens/headers.dart';
 
+import 'screens/headers.dart';
 import 'screens/avatars.dart';
 
 void main() {

@@ -22,8 +22,8 @@ class HeaderWithGreeting extends StatelessWidget
     return AppBar(
       elevation: 0,
       toolbarHeight: 100.0,
-      leadingWidth: 600.0,
       backgroundColor: Colors.transparent,
+      automaticallyImplyLeading: false,
       title: Row(
         children: [
           Column(

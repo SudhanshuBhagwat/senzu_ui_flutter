@@ -1,30 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:senzu_ui_flutter/senzu_ui_flutter.dart';
+import 'package:senzu_ui_flutter/components/index.dart';
+import 'package:senzuiui_flutter/screens/headers.dart';
+
+import 'screens/avatars.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 const String imageURI = 'https://source.unsplash.com/random';
-const String headerTitle = 'Senzu UI';
-const IconData icon = Icons.menu;
-const List<Map<String, String>> dataWithNoAvatar = [
-  {'intial': 'S'},
-  {'intial': 'U'},
-  {'intial': 'D'},
-  {'intial': 'H'},
-  {'intial': 'A'},
-  {'intial': 'N'},
-];
-const List<Map<String, String>> data = [
-  {'imageUri': imageURI, 'intial': 'S'},
-  {'imageUri': imageURI, 'intial': 'U'},
-  {'imageUri': imageURI, 'intial': 'D'},
-  {'imageUri': imageURI, 'intial': 'H'},
-  {'imageUri': imageURI, 'intial': 'A'},
-  {'imageUri': imageURI, 'intial': 'N'},
-];
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -57,146 +43,45 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  radius: AvatarSize.none,
+            const ListTile(
+              title: Text(
+                'Components',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
                 ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  radius: AvatarSize.sm,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  radius: AvatarSize.md,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  radius: AvatarSize.lg,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  radius: AvatarSize.xlg,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  radius: AvatarSize.full,
-                ),
-              ],
+              ),
             ),
-            const SizedBox(
-              height: 16.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  imageUri: imageURI,
-                  radius: AvatarSize.none,
+            const Divider(),
+            ListTile(
+              title: const Text(
+                '1. Headers',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
                 ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  imageUri: imageURI,
-                  radius: AvatarSize.sm,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  imageUri: imageURI,
-                  radius: AvatarSize.md,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  imageUri: imageURI,
-                  radius: AvatarSize.lg,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  imageUri: imageURI,
-                  radius: AvatarSize.xlg,
-                ),
-                Avatar(
-                  size: 50,
-                  title: 'S',
-                  imageUri: imageURI,
-                  radius: AvatarSize.full,
-                ),
-              ],
-            ),
-            const SimpleHeader(
-              headerTitle: headerTitle,
-              icon: icon,
-            ),
-            const HeaderWithAvatar(
-              headerTitle: headerTitle,
-              isHeaderCentered: true,
-              icon: icon,
-              imageUri: imageURI,
-              avatarSize: AvatarSize.full,
-            ),
-            const HeaderWithAvatarAndSubheading(
-              headerTitle: headerTitle,
-              subTitle: 'Simple Sub Heading',
-              icon: icon,
-              imageUri: imageURI,
-              avatarSize: AvatarSize.full,
-            ),
-            const HeaderWithAvatarNoTitle(
-              icon: icon,
-              imageUri: imageURI,
-              avatarSize: AvatarSize.full,
-            ),
-            HeaderWithAvatarAndSearch(
-              headerTitle: headerTitle,
-              icon: icon,
-              imageUri: imageURI,
-              avatarSize: AvatarSize.full,
-              onSubmit: (String value) {
-                // Do some submit logic
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Headers()),
+                );
               },
             ),
-            const HeaderWithGreeting(
-              greeting: 'Hello',
-              title: 'Sudhanshu',
-              imageUri: imageURI,
-              avatarSize: AvatarSize.full,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                StackedAvatar(
-                  data: data,
+            ListTile(
+              title: const Text(
+                '2. Avatars',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
                 ),
-                StackedAvatar(
-                  data: dataWithNoAvatar,
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                StackedAvatar(
-                  data: data,
-                  ltr: false,
-                ),
-                StackedAvatar(
-                  data: dataWithNoAvatar,
-                  ltr: false,
-                ),
-              ],
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Avatars()),
+                );
+              },
             ),
           ],
         ),

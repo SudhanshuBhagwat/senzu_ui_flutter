@@ -8,11 +8,13 @@ class Breadcrumbs extends StatelessWidget {
     required this.data,
     this.showIcon = true,
     this.outlined = false,
+    required this.onPress,
   }) : super(key: key);
 
   final List<Map<String, dynamic>> data;
   final bool showIcon;
   final bool outlined;
+  final void Function() onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class Breadcrumbs extends StatelessWidget {
             text: Text(
               data[index]['fileName'],
             ),
+            onPress: onPress,
           );
         }
 
@@ -42,6 +45,7 @@ class Breadcrumbs extends StatelessWidget {
               text: Text(
                 data[index]['fileName'],
               ),
+              onPress: onPress,
             ),
             const Icon(Icons.chevron_right),
           ],

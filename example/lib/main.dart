@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:senzu_ui_flutter/components/index.dart';
 
+import 'screens/breadcrumb.dart';
 import 'screens/headers.dart';
 import 'screens/avatars.dart';
 
@@ -11,23 +11,6 @@ void main() {
 }
 
 const String imageURI = 'https://source.unsplash.com/random';
-const List<Map<String, dynamic>> data = [
-  {
-    'fileName': 'Users',
-  },
-  {
-    'fileName': 'Projects',
-  },
-  {
-    'fileName': 'senzu_ui_flutter',
-  },
-  {
-    'fileName': 'example',
-  },
-  {
-    'fileName': 'breadcrumbs.dart',
-  },
-];
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -100,45 +83,20 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
-            Container(
-              height: 60.0,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
+            ListTile(
+              title: const Text(
+                '3. Breadcrumbs',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              child: const Breadcrumbs(
-                data: data,
-              ),
-            ),
-            Container(
-              height: 60.0,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-              ),
-              child: const Breadcrumbs(
-                showIcon: false,
-                data: data,
-              ),
-            ),
-            Container(
-              height: 60.0,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-              ),
-              child: const Breadcrumbs(
-                outlined: true,
-                data: data,
-              ),
-            ),
-            Container(
-              height: 60.0,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-              ),
-              child: const Breadcrumbs(
-                showIcon: false,
-                outlined: true,
-                data: data,
-              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Breadcrumb()),
+                );
+              },
             ),
           ],
         ),

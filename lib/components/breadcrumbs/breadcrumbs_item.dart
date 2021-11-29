@@ -7,19 +7,22 @@ class BreadcrumbsItem extends StatelessWidget {
     required this.icon,
     required this.text,
     required this.outlined,
+    required this.onPress,
   }) : super(key: key);
 
   final bool showIcon;
   final Icon icon;
   final Text text;
   final bool outlined;
+  final void Function() onPress;
 
   @override
   Widget build(BuildContext context) {
     if (outlined) {
       if (showIcon) {
+        print(text);
         return OutlinedButton.icon(
-          onPressed: () {},
+          onPressed: onPress,
           icon: icon,
           label: text,
           style: ButtonStyle(
@@ -37,7 +40,7 @@ class BreadcrumbsItem extends StatelessWidget {
       }
 
       return OutlinedButton(
-        onPressed: () {},
+        onPressed: onPress,
         child: text,
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.all(
@@ -55,7 +58,7 @@ class BreadcrumbsItem extends StatelessWidget {
 
     if (showIcon) {
       return TextButton.icon(
-        onPressed: () {},
+        onPressed: onPress,
         icon: icon,
         label: text,
         style: ButtonStyle(
@@ -67,7 +70,7 @@ class BreadcrumbsItem extends StatelessWidget {
     }
 
     return TextButton(
-      onPressed: () {},
+      onPressed: onPress,
       child: text,
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.all(
